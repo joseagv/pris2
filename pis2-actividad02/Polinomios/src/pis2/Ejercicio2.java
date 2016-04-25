@@ -50,10 +50,7 @@ public class Ejercicio2 {
 		an3 = s3.get(contadorM + 1);
 		// System.out.println(an3);
 
-		if (polinomio.size() == 6) {
-			an5 = s3.get(contadorM + 2);
-			// System.out.println(an5);
-		}
+		an5 = comprobarSize(polinomio, an5, contadorM);
 
 		// valores s2
 		b1 = (an1 * an2 - an * an3) / an1;
@@ -70,12 +67,24 @@ public class Ejercicio2 {
 		// añadir a lista s1
 		s1.add(c1);
 
-		if (polinomio.size() == 6) {
-			s1.add(c2);
-		}
+		comprobarSizeC2(polinomio, c2);
 
 		// valor primero
 		valorPrimero(polinomio, an3, an4, first1, first2, first3);
+	}
+
+	private void comprobarSizeC2(ArrayList<Double> polinomio, double c2) {
+		if (polinomio.size() == 6) {
+			s1.add(c2);
+		}
+	}
+
+	private double comprobarSize(ArrayList<Double> polinomio, double an5, int contadorM) {
+		if (polinomio.size() == 6) {
+			an5 = s3.get(contadorM + 2);
+			// System.out.println(an5);
+		}
+		return an5;
 	}
 
 	private void valorPrimero(ArrayList<Double> polinomio, double an3,

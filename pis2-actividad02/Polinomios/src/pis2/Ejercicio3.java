@@ -38,6 +38,10 @@ public class Ejercicio3 {
 		if (count < 2) {
 			throw new IllegalArgumentException("interpolate: illegal count!");
 		}
+		return addArray(xizq, xder, count);
+	}
+
+	private double[] addArray(double xizq, double xder, int count) {
 		double[] array = new double[count + 1];
 		for (int i = 0; i <= count; ++i) {
 			array[i] = xizq + i * (xder - xizq) / count;
