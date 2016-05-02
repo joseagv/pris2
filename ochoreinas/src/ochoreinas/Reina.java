@@ -1,6 +1,7 @@
 package ochoreinas;
 
 import java.awt.*;
+import java.io.Serializable;
 //
 //Eight Reinas puzzle written in Java
 //Written by Tim Budd, January 1996
@@ -8,7 +9,7 @@ import java.awt.*;
 //
 
 
-class Reina {
+class Reina implements Serializable{
     // datos
 private int fila;
 private int columna;

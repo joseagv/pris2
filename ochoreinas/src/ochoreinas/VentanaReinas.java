@@ -7,6 +7,7 @@ package ochoreinas;
 
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 
 public class VentanaReinas extends Frame {
@@ -29,6 +30,7 @@ public VentanaReinas() {
     addWindowListener(new CloseQuit());
     }
 
+@Override
 public void paint(Graphics g) {
     super.paint(g);
         // dibuja el tablero
@@ -42,12 +44,14 @@ public void paint(Graphics g) {
     }
 
 private class CloseQuit extends WindowAdapter {
+	@Override
     public void windowClosing (WindowEvent e) {
-        System.exit(0);
+		System.exit(0);
     }
 }
 
 private class MouseKeeper extends MouseAdapter {
+	@Override
     public void mousePressed (MouseEvent e) {
         ultimaReina.avanza();
         repaint();
