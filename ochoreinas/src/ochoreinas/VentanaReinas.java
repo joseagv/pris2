@@ -12,11 +12,6 @@ import javax.swing.*;
 
 public class VentanaReinas extends Frame {
 
-public static void main(String [ ] args) {
-    VentanaReinas world = new VentanaReinas();
-    world.show();
-}
-
 private Reina ultimaReina = null;
 
 public VentanaReinas() {
@@ -56,5 +51,10 @@ private class MouseKeeper extends MouseAdapter {
         ultimaReina.avanza();
         repaint();
     }
+}
+
+public static void main(String [ ] args) {
+    VentanaReinas world = new VentanaReinas();
+    world.show();
 }
 }
