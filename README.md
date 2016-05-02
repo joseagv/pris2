@@ -1,3 +1,3 @@
 # pris2
-# José Andrés González Ventura
-# José Manuel Lopez Gallardo
+* José Andrés González Ventura
+* José Manuel Lopez Gallardo
