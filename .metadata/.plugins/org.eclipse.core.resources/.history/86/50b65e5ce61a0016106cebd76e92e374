@@ -6,7 +6,7 @@ import java.util.List;
 public class Ejercicio3 {
 
 	private ArrayList<Integer> polinomio;
-	 static boolean hayraiz = false;
+	public static final boolean HAYRAIZ = false;
 
 	public Ejercicio3() {
 		this.polinomio = new ArrayList<>();
@@ -118,12 +118,12 @@ public class Ejercicio3 {
 		} else {
 			if ((fxizq * fxr) > 0) {
 				System.out.println("hay una raiz en xr.");
-				hayraiz = true;
+				HAYRAIZ = true;
 			} else {
 				System.out.println("no existe raiz en xr.");
 			}
 		}
-		return hayraiz;
+		return HAYRAIZ;
 	}
 
 	public ArrayList<Double> arrayAsList(double[] array) {

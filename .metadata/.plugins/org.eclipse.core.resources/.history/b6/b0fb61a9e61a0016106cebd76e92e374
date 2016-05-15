@@ -24,7 +24,7 @@ public class Ejercicio3Programa {
 
 		listaResultado = ej3.comprobarRaiz(xizq, xder);
 
-		boolean hayraiz = Ejercicio3.hayraiz;
+		boolean hayraiz = ej3.hayraiz;
 
 		System.out.println("Valor de xr: " + listaResultado.get(0));
 
