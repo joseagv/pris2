@@ -1,0 +1,104 @@
+package pisdos;
+
+import java.util.ArrayList;
+
+
+public class Polinomio {
+
+	ArrayList<Integer> polino = new ArrayList<>();
+
+	public static ArrayList<Integer> suma(ArrayList<Integer> array1,
+			ArrayList<Integer> array2) {
+
+		ArrayList<Integer> solucion = new ArrayList<>();
+		// Return the sum of itself and other polynomial
+		if (array1.size() > array2.size()) {
+
+			int auxSizes = array1.size() - array2.size();
+			for (int i = 0; i < auxSizes; i++)
+
+				array2.add(0);
+			for (int i = 0; i < array1.size(); i++) {
+				solucion.add(array1.get(i) + array2.get(i));
+
+			}
+
+		} else if (array1.size() < array2.size()) {
+			int auxSizes = array2.size() - array1.size();
+			for (int i = 0; i < auxSizes; i++)
+				array1.add(0);
+			for (int i = 0; i < array2.size(); i++) {
+				solucion.add(array2.get(i) + array1.get(i));
+			}
+		}
+
+		else {
+			for (int i = 0; i < array2.size(); i++) {
+				solucion.add(array2.get(i) + array1.get(i));
+			}
+		}
+
+		return solucion;
+	}
+
+	public static ArrayList<Integer> product(ArrayList<Integer> array1,
+			ArrayList<Integer> array2) {
+		// Return the product of itself and other polynomial
+
+		ArrayList<Integer> solucion = new ArrayList<>();
+		int auxSizes = array1.size() + array2.size() - 2;
+		for (int i = 0; i <= auxSizes; i++)
+			solucion.add(0);
+		for (int i = 0; i < array1.size(); i++) {
+			for (int j = 0; j < array2.size(); j++) {
+				solucion.set(i + j, (array1.get(i) * array2.get(j)) + solucion.get(i + j));
+			}
+		}
+		return solucion;
+	}
+
+	public static ArrayList<Integer> divide_by(ArrayList<Integer> array1,
+			ArrayList<Integer> array2) throws PolynominalTooLongError {
+		// Return a tuple with the quotient and remainder
+
+		ArrayList<Integer> solucion = new ArrayList<>();
+		for (int i = 0; i < array1.size(); i++)
+			solucion.add(0);
+		if (array2.size() > 2)
+			throw new PolynominalTooLongError();
+		int carry = 0;
+		int divisor = -array2.get(0);
+		for (int i = array1.size() - 1; i >= 0; i--) {
+			solucion.set(i, carry + array1.get(i));
+			carry = solucion.get(i) * divisor;
+		}
+
+		return solucion;
+
+	}
+
+	public static ArrayList<Integer> derivate(ArrayList<Integer> array1) {
+		// Return an array with the derivated polynome.
+		ArrayList<Integer> solucion = new ArrayList<>();
+		for (int i = 0; i < array1.size() - 1; i++)
+			solucion.add(0);
+
+		for (int i = 1, j = 0; i < array1.size(); i++, j++) {
+			solucion.set(j, i * array1.get(i));
+		}
+		return solucion;
+	}
+
+	static class PolynominalTooLongError extends Exception {
+		// Parameterless Constructor
+		public PolynominalTooLongError() {
+			//Es vacio
+		}
+
+		// Constructor that accepts a message
+		public PolynominalTooLongError(String message) {
+			super(message);
+		}
+	}
+
+}
