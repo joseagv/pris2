@@ -1,0 +1,5 @@
+projectKey=org.sonarqube:java-simple-sq-scanner
+serverUrl=http://sonar-pis116eq4.rhcloud.com
+dashboardUrl=http://sonar-pis116eq4.rhcloud.com/dashboard/index/org.sonarqube:java-simple-sq-scanner
+ceTaskId=AVS2HComdlXS_mrmf0GW
+ceTaskUrl=http://sonar-pis116eq4.rhcloud.com/api/ce/task?id=AVS2HComdlXS_mrmf0GW
