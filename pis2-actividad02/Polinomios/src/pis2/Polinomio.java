@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Polinomio {
 
-	ArrayList<Integer> polino = new ArrayList<Integer>();
+	ArrayList<Integer> polino = new ArrayList<>();
 
 	public static ArrayList<Integer> suma(ArrayList<Integer> array1,
 			ArrayList<Integer> array2) {
@@ -45,7 +45,7 @@ public class Polinomio {
 			ArrayList<Integer> array2) {
 		// Return the product of itself and other polynomial
 
-		ArrayList<Integer> solucion = new ArrayList<Integer>();
+		ArrayList<Integer> solucion = new ArrayList<>();
 		int auxSizes = array1.size() + array2.size() - 2;
 		for (int i = 0; i <= auxSizes; i++)
 			solucion.add(0);
@@ -61,7 +61,7 @@ public class Polinomio {
 			ArrayList<Integer> array2) throws PolynominalTooLongError {
 		// Return a tuple with the quotient and remainder
 
-		ArrayList<Integer> solucion = new ArrayList<Integer>();
+		ArrayList<Integer> solucion = new ArrayList<>();
 		for (int i = 0; i < array1.size(); i++)
 			solucion.add(0);
 		if (array2.size() > 2)
@@ -79,7 +79,7 @@ public class Polinomio {
 
 	public static ArrayList<Integer> derivate(ArrayList<Integer> array1) {
 		// Return an array with the derivated polynome.
-		ArrayList<Integer> solucion = new ArrayList<Integer>();
+		ArrayList<Integer> solucion = new ArrayList<>();
 		for (int i = 0; i < array1.size() - 1; i++)
 			solucion.add(0);
 

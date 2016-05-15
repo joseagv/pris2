@@ -6,10 +6,10 @@ import java.util.List;
 public class Ejercicio3 {
 
 	private ArrayList<Integer> polinomio;
-	static boolean hayraiz = false;
+	private static boolean hayraiz = false;
 
 	public Ejercicio3() {
-		this.polinomio = new ArrayList<Integer>();
+		this.polinomio = new ArrayList<>();
 
 		addValores();
 	}
@@ -51,18 +51,15 @@ public class Ejercicio3 {
 
 	public ArrayList<Double> comprobarRaiz(double xizq, double xder) {
 
-		double[] array;
 
-		ArrayList<Double> solucion = new ArrayList<Double>();
+		ArrayList<Double> solucion = new ArrayList<>();
 		double fxizq = 0;
 		double fxder = 0;
-		double parcialIzq, parcialDer;
-		ArrayList<Double> izquierda = new ArrayList<Double>();
-		ArrayList<Double> derecha = new ArrayList<Double>();
-		ArrayList<Double> raiz = new ArrayList<Double>();
+		ArrayList<Double> izquierda = new ArrayList<>();
+		ArrayList<Double> derecha = new ArrayList<>();
+		ArrayList<Double> raiz = new ArrayList<>();
 		double xr;
 		double fxr = 0;
-		double r;
 
 		// añadir a lista soluciones
 		addParcial(xizq, izquierda);
@@ -130,7 +127,7 @@ public class Ejercicio3 {
 	}
 
 	public ArrayList<Double> arrayAsList(double[] array) {
-		ArrayList<Double> lista = new ArrayList<Double>();
+		ArrayList<Double> lista = new ArrayList<>();
 		for (int index = 0; index < array.length; index++) {
 			lista.add(array[index]);
 		}

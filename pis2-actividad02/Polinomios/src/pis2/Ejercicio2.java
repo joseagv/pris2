@@ -12,11 +12,11 @@ public class Ejercicio2 {
 	ArrayList<Double> s0 = null;
 
 	public Ejercicio2() {
-		this.s4 = new ArrayList<Double>();
-		this.s3 = new ArrayList<Double>();
-		this.s2 = new ArrayList<Double>();
-		this.s1 = new ArrayList<Double>();
-		this.s0 = new ArrayList<Double>();
+		this.s4 = new ArrayList<>();
+		this.s3 = new ArrayList<>();
+		this.s2 = new ArrayList<>();
+		this.s1 = new ArrayList<>();
+		this.s0 = new ArrayList<>();
 	}
 
 	public void routhHurwitz(ArrayList<Double> polinomio) {
