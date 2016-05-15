@@ -49,18 +49,19 @@ public class Ejercicio3 {
 		return array;
 	}
 
-	public ArrayList<Double> comprobarRaiz(double xizq, double xder,
-			int precision) {
+	public ArrayList<Double> comprobarRaiz(double xizq, double xder) {
 
-		double[] array = null;
+		double[] array;
 
 		ArrayList<Double> solucion = new ArrayList<Double>();
-		double fxizq = 0, fxder = 0;
+		double fxizq = 0;
+		double fxder = 0;
 		double parcialIzq, parcialDer;
 		ArrayList<Double> izquierda = new ArrayList<Double>();
 		ArrayList<Double> derecha = new ArrayList<Double>();
 		ArrayList<Double> raiz = new ArrayList<Double>();
-		double xr, fxr = 0;
+		double xr;
+		double fxr = 0;
 		double r;
 
 		// añadir a lista soluciones
@@ -77,11 +78,9 @@ public class Ejercicio3 {
 		// xr = xder – f(xder)*(xizq-xder)/(f(xizq)-f(xder))
 		xr = xder - fxder * (xizq - xder) / (fxizq - fxder);
 
-		// array = interpolate(fxizq, fxder, precision);
-		// solucion = arrayAsList(array);
 
 		solucion.add(xr);
-		// System.out.println(xr);
+
 
 		addParcial(xr, raiz);
 
@@ -91,7 +90,6 @@ public class Ejercicio3 {
 		if (evaluaciones) {
 			solucion.add(fxr);
 		}
-		// System.out.println(fxr);
 
 		return solucion;
 	}

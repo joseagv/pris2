@@ -2,9 +2,10 @@ package pis2;
 
 import java.util.ArrayList;
 
+
 public class Polinomio {
 
-	ArrayList<Integer> polinomio = new ArrayList<Integer>();
+	ArrayList<Integer> polino = new ArrayList<Integer>();
 
 	public static ArrayList<Integer> suma(ArrayList<Integer> array1,
 			ArrayList<Integer> array2) {
@@ -13,7 +14,7 @@ public class Polinomio {
 		// Return the sum of itself and other polynomial
 		if (array1.size() > array2.size()) {
 
-			int auxSizes = (array1.size() - array2.size());
+			int auxSizes = array1.size() - array2.size();
 			for (int i = 0; i < auxSizes; i++)
 
 				array2.add(0);
@@ -23,7 +24,7 @@ public class Polinomio {
 			}
 
 		} else if (array1.size() < array2.size()) {
-			int auxSizes = (array2.size() - array1.size());
+			int auxSizes = array2.size() - array1.size();
 			for (int i = 0; i < auxSizes; i++)
 				array1.add(0);
 			for (int i = 0; i < array2.size(); i++) {
@@ -45,7 +46,7 @@ public class Polinomio {
 		// Return the product of itself and other polynomial
 
 		ArrayList<Integer> solucion = new ArrayList<Integer>();
-		int auxSizes = (array1.size() + array2.size() - 2);
+		int auxSizes = array1.size() + array2.size() - 2;
 		for (int i = 0; i <= auxSizes; i++)
 			solucion.add(0);
 		for (int i = 0; i < array1.size(); i++) {
@@ -68,7 +69,7 @@ public class Polinomio {
 		int carry = 0;
 		int divisor = -array2.get(0);
 		for (int i = array1.size() - 1; i >= 0; i--) {
-			solucion.set(i, (carry + array1.get(i)));
+			solucion.set(i, carry + array1.get(i));
 			carry = solucion.get(i) * divisor;
 		}
 
@@ -83,7 +84,7 @@ public class Polinomio {
 			solucion.add(0);
 
 		for (int i = 1, j = 0; i < array1.size(); i++, j++) {
-			solucion.set(j, (i * array1.get(i)));
+			solucion.set(j, i * array1.get(i));
 		}
 		return solucion;
 	}
@@ -91,6 +92,7 @@ public class Polinomio {
 	static class PolynominalTooLongError extends Exception {
 		// Parameterless Constructor
 		public PolynominalTooLongError() {
+			//Es vacio
 		}
 
 		// Constructor that accepts a message
