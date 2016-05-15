@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Ejercicio3 {
 
 	private ArrayList<Integer> polinomio;
-	static boolean hayraiz = false;
+	private static boolean hayraiz = false;
 
 	public Ejercicio3() {
 		this.polinomio = new ArrayList<>();

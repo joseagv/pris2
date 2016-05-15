@@ -57,7 +57,7 @@ public class Polinomio {
 		return solucion;
 	}
 
-	public static ArrayList<Integer> divideBy(ArrayList<Integer> array1,
+	public static ArrayList<Integer> divide_by(ArrayList<Integer> array1,
 			ArrayList<Integer> array2) throws PolynominalTooLongError {
 		// Return a tuple with the quotient and remainder
 

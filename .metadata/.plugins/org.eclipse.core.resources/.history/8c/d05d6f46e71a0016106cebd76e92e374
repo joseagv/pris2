@@ -1,11 +1,12 @@
 package pisdos;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Ejercicio3 {
 
 	private ArrayList<Integer> polinomio;
-	static boolean hayraiz = false;
+	 static boolean hayraiz = false;
 
 	public Ejercicio3() {
 		this.polinomio = new ArrayList<>();
