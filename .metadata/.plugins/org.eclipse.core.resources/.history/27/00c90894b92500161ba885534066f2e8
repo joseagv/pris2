@@ -1,0 +1,18 @@
+package org.mp.bloque1.ejercicio07;
+
+public class CompararArgumentos {
+	public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
+		try{
+			if(args[0].equals(args[1])){
+				System.out.println("Los dos primeros argumentos coinciden");
+			}
+			else{
+				System.out.println("Los dos primeros argumentos NO coinciden");
+			}
+		}
+		catch (ArrayIndexOutOfBoundsException e){
+			System.out.println("No hay argumentos para comparar");
+		}
+	}
+
+}

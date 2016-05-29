@@ -128,7 +128,7 @@ public class PolinomiosTest {
 		dos.add(3);
 		
 		try{
-			solucion1 = Polinomio.divide_by(uno, dos);
+			solucion1 = Polinomio.divideBy(uno, dos);
 		}catch(Exception e){
 			assertTrue(true);
 		}
@@ -141,7 +141,7 @@ public class PolinomiosTest {
 		solucion.add(-7);
 		solucion.add(5);
 		
-		solucion1 = Polinomio.divide_by(uno, dos);
+		solucion1 = Polinomio.divideBy(uno, dos);
 		
 		assertEquals(solucion, solucion1);
 		

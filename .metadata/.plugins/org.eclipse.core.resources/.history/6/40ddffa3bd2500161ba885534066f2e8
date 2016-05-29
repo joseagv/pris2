@@ -1,0 +1,43 @@
+package org.mp.practica3.ejercicio01;
+
+/**
+ * Clase con tres metodos estaticos para calcular la sumatoria de un numero
+ * @author Javier Imbernon Molina
+ */
+public class Sumatoria {
+	/**
+	 * Metodo estatico que calcula la sumatoria de un numero de forma iterativa
+	 * @param n el numero cuya sumatoria se quiere calcular
+	 * @return el resultado
+	 */
+	public static int sumaIter(int n){
+		int resultado = 0;
+		for(int i = 1; i <= n; i++){
+			resultado += i;
+		}
+		return resultado;
+	}
+	
+	/**
+	 * Metodo estatico que calcula la sumatoria de un numero de forma recursiva
+	 * @param n el numero cuya sumatoria se quiere calcular
+	 * @return el resultado
+	 */
+	public static int sumaRec(int n){
+		if(n == 1){
+			return 1;
+		}
+		else{
+			return sumaRec(n-1) + n;
+		}
+	}
+	
+	/**
+	 * Metodo estatico que calcula la sumatoria de un numero de forma directa (usando la formula de Gauss)
+	 * @param n el numero cuya sumatoria se quiere calcular
+	 * @return el resultado
+	 */
+	public static int sumaGauss(int n){
+		return n*(n+1)/2;
+	}
+}

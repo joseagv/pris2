@@ -1,0 +1,75 @@
+package org.mp.practica3.ejercicio01;
+
+/**
+ * Clase con tres metodos estaticos publicos que indican si un numero es par
+ * @author Javier Imbernon Molina
+ */
+public class ParImpar {
+	/**
+	 * Metodo estatico que calcula si un numero es par de forma directa
+	 * @param n el numero a estudiar
+	 * @return true si es par, else si es impar
+	 */
+	public static boolean parImparDirecto(int n){
+		if(n == 0){
+			return true;
+		}
+		else{
+			return n%2 == 0;
+		}
+	}
+	
+	/**
+	 * Metodo estatico que calcula si un numero es par de forma iterativa
+	 * @param n el numero a estudiar
+	 * @return true si es par, else si es impar
+	 */
+	public static boolean parImparIter(int n){
+		int numero = Math.abs(n);
+		while(numero >= 1){
+			numero = numero -2;
+		}
+		if(numero == 0){
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * Metodo estatico que calcula si un numero es par de forma recursiva
+	 * @param n el numero a estudiar
+	 * @return true si es par, else si es impar
+	 */
+	public static boolean parImparRec(int n){
+		int numero = Math.abs(n);
+		return par(numero);
+	}
+	
+	/**
+	 * Metodo privado que es usado por parImparRec(int n) para saber si un numero es par
+	 * @param n el numero a estudiar
+	 * @return true si es 0, en caso contrario devuelve impar(n-1)
+	 */
+	private static boolean par(int n){
+		if(n == 0){
+			return true;
+		}
+		else{
+			return impar(n-1);
+		}
+	}
+	
+	/**
+	 * Metodo privado que es usado por parImparRec(int n) para saber si un numero es par
+	 * @param n el numero a estudiar
+	 * @return false si es 0, en caso contrario devuelve par(n-1)
+	 */
+	private static boolean impar(int n){
+		if(n == 0){
+			return false;
+		}
+		else{
+			return par(n-1);
+		}
+	}
+}
